@@ -45,13 +45,9 @@ jobs:
         with:
           name: ng_deploy
           
-      - name: Check download
-        run: ls -R
-#         working-directory: ng_deploy
-          
       - name: Deploy to GH Pages
         uses: JamesIves/github-pages-deploy-action@4.1.1
         with:
           branch: gh-pages
-          folder: ng_deploy/twitch-drop-campaigns-ui
+          folder: twitch-drop-campaigns-ui
           
