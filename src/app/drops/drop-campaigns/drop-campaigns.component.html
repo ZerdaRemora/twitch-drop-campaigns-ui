@@ -20,8 +20,29 @@
         </tbody>
     </table>
 </div> -->
-<div id="card-list" class="d-flex flex-wrap">
-    <span *ngFor="let drop of drops" class="campaign-card">
-        <app-campaign-card [drop]="drop"></app-campaign-card>
-    </span>
+<a href="#active-drops" data-bs-toggle="collapse" aria-expanded="false" aria-controls="active-drops"><h1>Active:</h1></a>
+<div id="active-drops" class="collapse">
+    <div class="d-flex flex-wrap">
+        <span *ngFor="let drop of activeDrops" class="campaign-card">
+            <app-campaign-card [drop]="drop"></app-campaign-card>
+        </span>
+    </div>
+</div>
+
+<a href="#upcoming-drops" data-bs-toggle="collapse" aria-expanded="false" aria-controls="upcoming-drops"><h1>Upcoming:</h1></a>
+<div id="upcoming-drops" class="collapse">
+    <div id="card-list" class="d-flex flex-wrap">
+        <span *ngFor="let drop of upcomingDrops" class="campaign-card">
+            <app-campaign-card [drop]="drop"></app-campaign-card>
+        </span>
+    </div>
+</div>
+
+<a href="#expired-drops" data-bs-toggle="collapse" aria-expanded="false" aria-controls="expired-drops"><h1>Expired:</h1></a>
+<div id="expired-drops" class="collapse">
+    <div id="card-list" class="d-flex flex-wrap">
+        <span *ngFor="let drop of expiredDrops" class="campaign-card">
+            <app-campaign-card [drop]="drop"></app-campaign-card>
+        </span>
+    </div>
 </div>

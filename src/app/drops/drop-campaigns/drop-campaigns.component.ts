@@ -9,13 +9,23 @@ import { DropCampaignService } from '../services/drop-campaign-service.service';
 })
 export class DropCampaignsComponent implements OnInit {
 
-  drops: DropCampaign[];
+  activeDrops: DropCampaign[];
+  upcomingDrops: DropCampaign[];
+  expiredDrops: DropCampaign[];
 
   constructor(private dropCampaignService: DropCampaignService) { }
 
   ngOnInit(): void {
     this.dropCampaignService.getActive().subscribe(data => {
-      this.drops = data;
+      this.activeDrops = data;
+    });
+
+    this.dropCampaignService.getUpcoming().subscribe(data => {
+      this.upcomingDrops = data;
+    });
+
+    this.dropCampaignService.getExpired().subscribe(data => {
+      this.expiredDrops = data;
     });
   }
 

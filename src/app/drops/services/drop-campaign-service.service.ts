@@ -16,4 +16,12 @@ export class DropCampaignService {
   public getActive(): Observable<DropCampaign[]> {
     return this.http.get<DropCampaign[]>(this.endpointUrl + "/active")
   }
+
+  public getUpcoming(): Observable<DropCampaign[]> {
+    return this.http.get<DropCampaign[]>(this.endpointUrl + "/upcoming")
+  }
+
+  public getExpired(): Observable<DropCampaign[]> {
+    return this.http.get<DropCampaign[]>(this.endpointUrl + "/expired")
+  }
 }
