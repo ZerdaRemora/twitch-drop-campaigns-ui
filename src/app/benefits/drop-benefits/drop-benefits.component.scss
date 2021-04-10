@@ -1,0 +1,13 @@
+.animate {
+    animation: highlight 1500ms ease-out;
+}
+
+@keyframes highlight {
+    0% {
+        background-color: rgba(255, 255, 0, 0.5);
+    }
+
+    100% {
+        background-color: white;
+    }
+}

@@ -6,7 +6,9 @@
         <div class="col align-self-center">
             <div class="row row-cols-1 gy-2">
                 <div class="col">
-                    <span style="font-weight: bold;">{{ this.drop.name }}</span>
+                    <a [routerLink]="['/benefits', this.drop.id]">
+                        <span style="font-weight: bold;">{{ this.drop.name }}</span>
+                    </a>
                 </div>
                 <div class="col" style="margin-top: 0">
                     <span>{{ this.drop.game.name }}</span>

@@ -1,0 +1,5 @@
+<h2 *ngIf="benefits != null"><a [routerLink]="['']">🠔</a> {{benefits[0].dropCampaign.name}} Rewards</h2>
+<div *ngFor="let benefit of benefits">
+    <app-benefit-card [benefit]="benefit" (highlightEvent)="highlightPrerequisite($event)" [id]="benefit.id" style="display: block;"></app-benefit-card>
+    <br />
+</div>
