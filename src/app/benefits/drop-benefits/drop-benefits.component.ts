@@ -21,10 +21,9 @@ export class DropBenefitsComponent implements OnInit {
   }
 
   highlightPrerequisite(id: string) {
-    console.log(id);
     let el = document.getElementById(id);
     el.classList.remove("animate");
-    void el.offsetWidth; // Force recalc to refresh animation.
+    el.scrollTo(0, 0);
     el.classList.add("animate");
   }
 
