@@ -14,6 +14,12 @@
                 <div class="col" style="margin-top: 0">
                     <span>{{ benefit.dropCampaign.game.name }}</span>
                 </div>
+                <div class="col" style="margin-top: 0">
+                    <span>Limit: {{ benefit.entitlementLimit}}</span>
+                </div>
+                <div class="col" style="margin-top: 0">
+                    <span>{{ benefit.requiredMinutesWatched }} mins</span>
+                </div>
                 <div class="col" style="margin-top: 0" *ngIf="benefit.prerequisiteDrops.length > 0">
                     <a role="button" (click)="triggerHighlight(benefit.prerequisiteDrops[0].id)"><span style="font-weight: bold; text-decoration: underline;">Requires {{ benefit.prerequisiteDrops[0].name }}</span></a>
                 </div>
